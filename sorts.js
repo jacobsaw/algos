@@ -20,9 +20,10 @@ function bubbleSort(array){
 // bubbleSort([5,6,7,8,5,43,2]);
 
 function selectionSort(array){
+	var min, index;
 	for(var i = 0; i < array.length -1; i++){
-		var min = array[i];
-		var index = i;
+		min = array[i];
+		index = i;
 		for(var j = i +1; j < array.length; j++){
 			if(min > array[j]){
 				min = array[j];
@@ -36,13 +37,14 @@ function selectionSort(array){
 	}
 	return array;
 }
-// selectionSort([5,6,7,8,5,43,2]);
+selectionSort([5,6,7,8,5,43,2]);
 
 function insertionSort(array){
+	var temp, j;
 	for(var i =1; i < array.length; i++){
 		if(array[i] < array[i-1]){
-			var temp = array[i];
-			var j = i -1;
+			temp = array[i];
+			j = i -1;
 			while(temp < array[j] && j >= 0){
 				array[j+1] = array[j];
 				j--;
@@ -53,7 +55,7 @@ function insertionSort(array){
 	return array;
 }
 
-// insertionSort([5,7,8,6,4,2,5,7,9])
+insertionSort([5,7,8,6,4,2,5,7,9])
 
 
 
