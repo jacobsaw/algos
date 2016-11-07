@@ -1,0 +1,30 @@
+function pushFront(array,num){
+  for(var i = array.length-1; i >= 0; i--){
+    array[i+1] = array[i];
+  }
+  array[0] = num;
+  return array;
+}
+// console.log(pushFront([5,5,5,5,5,5,5,5],2))
+
+function insertAt(array,index,num){
+  for(var i = array.length-1; i >= index; i--){
+      array[i+1] = array[i];
+  }
+  array[index] = num;
+  return array;
+}
+
+// console.log(insertAt([5,5,5,5,5],7,66666))
+
+function removeAt(array, index){
+  array[array.length] = array[index];
+  for(var i = index; i < array.length-1; i++){
+    array[i] = array[i+1]
+  }
+  array.pop();
+  console.log(array);
+  return array.pop();
+}
+
+// console.log(removeAt([1,2,3,4,5,6,7],2))
