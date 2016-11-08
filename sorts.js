@@ -37,7 +37,7 @@ function selectionSort(array){
 	}
 	return array;
 }
-selectionSort([5,6,7,8,5,43,2]);
+// selectionSort([5,6,7,8,5,43,2]);
 
 function insertionSort(array){
 	var temp, j;
@@ -55,7 +55,29 @@ function insertionSort(array){
 	return array;
 }
 
-insertionSort([5,7,8,6,4,2,5,7,9])
+// insertionSort([5,7,8,6,4,2,5,7,9])
+
+function findPrimes(num){
+	if(num <2){
+		return [];
+	}
+	var array = [2];
+	for(var i = 3; i <= num; i = i+2){
+		var is_prime = true;
+		for(var j = 0; j < array.length; j++){
+			if(i % array[j] == 0){
+				is_prime = false;
+				break;
+			}
+		}
+		if(is_prime){
+			array.push(i);
+		}
+	}
+	return array;
+}
+
+findPrimes(50)
 
 
 

@@ -153,3 +153,13 @@ function reverseArray(array){
 }
 
 // console.log(reverseArray([1,2,3,4,5]))
+
+function reverseArrayWithouMath(array){
+  var temp;
+  for(var i = 0; i < array.length/2; i++){
+    temp = array[i];
+    array[i] = array[(array.length-1) - i]
+    array[(array.length-1)-i] = temp
+  }
+  return array;
+}
